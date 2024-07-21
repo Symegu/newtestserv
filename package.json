@@ -10,11 +10,11 @@
     "express": "^4.19.2"
   },
   "scripts": {
-        "watch": "tsc -w",
-        "dev": "yarn nodemon --inspect dist/index.js",
-        "jest": "jest -i",
-        "jest:coverage": "jest -i --coverage"
-    },
+    "watch": "tsc -w",
+    "dev": "yarn nodemon --inspect dist/index.js",
+    "jest": "jest -i",
+    "jest:coverage": "jest -i --coverage"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
@@ -24,7 +24,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
     "supertest": "^7.0.0",
-    "ts-jest": "^29.2.2",
+    "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   }
