@@ -7,16 +7,16 @@ export type DBType = { // типизация базы данных (что мы 
 
 export const db: DBType = { // создаём базу данных (пока это просто переменная)
   videos: [
-    {
-      "id": 1721585384599,
-      "title": "test",
-      "author": "test",
-      "canBeDownloaded": true,
-      "minAgeRestriction": null,
-      "availableResolutions": [
-          "P144"
-      ]
-    }
+    // {
+    //   "id": 1721585384599,
+    //   "title": "test",
+    //   "author": "test",
+    //   "canBeDownloaded": true,
+    //   "minAgeRestriction": null,
+    //   "availableResolutions": [
+    //       "P144"
+    //   ]
+    // }
   ],
   // some: []
 }
