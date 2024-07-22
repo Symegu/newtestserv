@@ -10,12 +10,14 @@ export const createVideoController = (req: Request, res: Response<any /*OutputVi
 
     let {title, author, availableResolutions} = req.body
     
-    if (title.trim().length > 40 || !title || title.typeof !== 'string' || !title.trim()) {
+    if (title.trim().length > 40 || !title || typeof(title) !== 'string' || !title.trim()) {
+        console.log(title)
         errors.errorsMessages.push(
             {message: 'incorrect title', field: 'title'}
         )
     }
-    if (author.trim().length > 20 || !author || author.typeof !== 'string' || !author.trim()) {
+    if (author.trim().length > 20 || !author || typeof(author) !== 'string' || !author.trim()) {
+        console.log(author)
         errors.errorsMessages.push(
             {message: 'incorrect author', field: 'author'}
         )
@@ -31,10 +33,10 @@ export const createVideoController = (req: Request, res: Response<any /*OutputVi
         })
     } else {
         availableResolutions = [];
-
     }
 
     if (errors.errorsMessages.length) {
+        
         return res.status(400).send(errors)
         
     }
@@ -54,6 +56,4 @@ export const createVideoController = (req: Request, res: Response<any /*OutputVi
 
     db.videos.push(newVideo)
     return res.status(201).send(newVideo)
-
-    
 }
